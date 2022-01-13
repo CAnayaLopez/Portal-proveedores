@@ -1,0 +1,103 @@
+<!--% include partials/head.ejs %
+
+node% include partials/foot.ejs %-->	
+	
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal de Proveedores - DILTEX</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link href="../css/VendorPortal.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--script src="js/jquery.placeholder.js"></script>
+    <script src="js/base.js"></script>
+    <script src="Login/Index.js"></script-->
+    <script>
+        function VendorPortalEnter() {
+            window.open('login', 'Portal de Proveedores', 'left=0,top=0,width=1024,height=768,location=0,toolbar=0,resizable=1,scrollbars=0');
+        }
+        /*function CfdiEnter() {
+            window.open('http://webportal.edicomgroup.com/suppliers/grupodiltex/indexViewer.html', 'Portal de Recepción de CFDI', 'left=0,top=0,width=1024,height=768,location=0,toolbar=0,resizable=1,scrollbars=0');
+        }
+        function CfdiRegister() {
+            window.open('http://webportal.edicomgroup.com/suppliers/grupodiltex/alta-proveedor-cfdi-grupo-diltex.html', 'Portal de Recepción de CFDI', 'left=0,top=0,width=1024,height=768,location=0,toolbar=0,resizable=1,scrollbars=0');
+        }*/
+    </script>
+</head>
+<body>
+<div id="wrapper" class="shadow" >
+<form id="IndexForm" runat="server" role="form">
+    <div class="row header">
+        <div class="col-xs-8">
+            <img src="images/logo_grupodiltex.png" style="margin-left: 20px" />
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+    <div id="Selector" class="row">
+        <div class="row center" style="margin-top: 40px; margin-bottom: 40px; min-height: 400px">
+            <div class="col-xs-6" style="border-right: 2px dotted rgba(0, 116, 72, 1);">
+                <object data="portal_recep.svg" type="image/svg+xml"></object>
+                <div id="divCfdi" style='width: 452px; height: 274px; min-height: 274px; min-width: 452px; background-image: url("images/img-cfdi.jpg"); padding-top: 225px; text-align: center; display: inline-block'>
+                    <button type="button" style="width: 180px; font-size: 11pt; color: rgba(116,116,116,1); background-color: rgba(221, 221, 221, 1);border-radius: 0px 0px 0px 0px" id="cmdRegisterCfdi" class="btn" onclick="CfdiRegister();">
+                    Registrarse
+                    </button>
+                    <button type="button" style="width: 180px; font-size: 11pt; color: white; background-color: rgba(0, 116, 72, 1);border-radius: 0px 0px 0px 0px" id="cmdEnterCfdi" class="btn" onclick="CfdiEnter();">
+                    Ingresar
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <object data="portal_provee.svg" type="image/svg+xml"></object>
+                <div id="divProveedores" style='width: 452px; height: 274px; min-height: 274px; min-width: 452px; background-image: url("images/img-proveedores.jpg"); padding-top: 225px; display: inline-block'>
+                    <button type="button" style="width: 180px; font-size: 11pt; color: white; background-color: rgba(0, 116, 72, 1);border-radius: 0px 0px 0px 0px" id="cmdEnterPortal" class="btn center-block"onclick="location.href='login'">
+                    Ingresar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="text-align: center; color: rgba(0, 116, 72, 1); font-family: Verdana; font-size: 10pt;" >
+            <div class="col-xs-12" style="padding-bottom: 30px" >
+                <p>Arrendadora Hexa - Comercializadora Hexa - Diltex - Franquicias Hexa - Ilusión - Maquiladora Hexa</p>
+                <p>Operadora Romano - Tiendas Hexa - Tizayuca Textil Vuva - VF Diltex</p>
+            </div>
+        </div>
+    </div>    
+    <div class="row footer">
+        <div class="col-xs-12">
+            &copy;2014 Diltex S.A. de C.V. Derechos Reservados |
+            <a href="Terminos">Términos y Condiciones</a> |
+            <a href="Privacidad">Aviso de Privacidad</a> 
+        </div>
+    </div>
+</form>
+</div>
+<div class="modal fade" id="ModalMessage" tabindex="-1" role="dialog" aria-labelledby="ModalMessage" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <div id="ModalMessageTitle"></div>
+        </div>
+        <div class="modal-body" id="ModalMessageBody">
+                
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,46 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPrivacy.aspx.cs" Inherits="Production.Web.VendorPortal.LoginPrivacy" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal de Proveedores - DILTEX</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link href="css/VendorPortal.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/base.js"></script>
+    <script src="Login/Index.js"></script>
+</head>
+<body>
+<div id="wrapper" class="shadow">
+  <%--<form id="IndexForm" runat="server" role="form">--%>
+    <div class="row header">
+        <div class="col-xs-8">
+            <img src="images/logo_grupodiltex.png" />
+        </div>
+        <div class="col-xs-4 icons">
+            <a href="Index.aspx"><img src="images/icono_log_in.png" 
+                onmouseout="hover(this, 'src','images/icono_log_in.png')"
+                onmouseover="hover(this, 'src','images/icono_log_in_hover.png')"/></a>
+            <img src="images/icono_ayuda.png" 
+                onmouseout="hover(this, 'src','images/icono_ayuda.png')"
+                onmouseover="hover(this, 'src','images/icono_ayuda_hover.png')"/>
+        </div>
+    </div>
+    <div id="ContentRow" class="row main">
+        <form id="PrivacyForm" runat="server" role="form">
+        </form>
+    </div>
+    <div class="row footer">
+        <div class="col-xs-12">
+            <a href="Index.aspx">Iniciar Sesión</a>
+        </div>
+    </div>
+  <%--</form>--%>
+</div>
+</body>
+</html>

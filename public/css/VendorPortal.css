@@ -1,0 +1,270 @@
+﻿/************************************************************************
+    Hoja de estilos del portal de proveedores
+    jmartinez - 09/10/2014
+ ************************************************************************/
+/***** Generales por HTML *****/
+body
+{
+    font-family: Verdana;
+    font-size: 12pt;
+}
+a:hover { text-decoration: none; }
+/***** Sobreescribiendo bootstrap a colores especificos del portal *****/
+.btn-primary {
+  color: #fff;
+  background-color: #797979;
+  border-color: #404040;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #404040;
+  border-color: #404040;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #797979;
+  border-color: #404040;
+}
+.btn-primary .badge {
+  color: #797979;
+  background-color: #fff;
+}
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #797979 0%, #404040 100%);
+  background-image:      -o-linear-gradient(top, #797979 0%, #404040 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#797979), to(#404040));
+  background-image:         linear-gradient(to bottom, #797979 0%, #404040 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#797979', endColorstr='#404040', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #404040;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #404040;
+  background-position: 0 -15px;
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #404040;
+  border-color: #404040;
+}
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  background-color: #404040;
+  background-image: none;
+}
+.carousel-inner .item img {
+    margin: 0 auto;
+}
+.form-control {
+    padding: 0px 12px;
+    font-size: inherit;
+}
+.form-control:-ms-input-placeholder { color: #a8a8a8; }
+.form-control::-moz-placeholder { color: #a8a8a8; }
+.form-control::-webkit-input-placeholder { color: #a8a8a8; }
+/***** contenedor principal *****/
+#wrapper {
+    width: 1024px; /* ancho total de la página */
+    margin: 0 auto;
+}
+.shadow { 
+    box-shadow: 0px 0px 11px rgba(0,0,0,0.9); 
+    -moz-box-shadow: 0px 0px 11px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0px 0px 11px rgba(0,0,0,0.9);
+}
+.img-separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -15px;
+    margin-right: 0px;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+/**** filas de bootstrap ****/
+.row {
+    margin: 0px;
+    display: table;
+    width: 100%;
+}
+.row.header {
+    height: 148px;
+    background-image: url("../images/pleca_superior.png");
+}
+#IndexForm .row.header {
+    height: 191px;
+    background-image: url("../images/header_log-in.png");
+}
+#UsernameLabel {
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+}
+.row .icons {
+    text-align: right;
+    padding-right: 35px;
+    cursor: pointer;
+}
+.row.menu {
+    background-color: #6f6f6f;
+    height: 30px;
+    margin-bottom: 13px;
+    box-shadow: 0px 3px 9px rgba(150,150,150,1); 
+    -moz-box-shadow: 0px 3px 9px rgba(150,150,150,1); 
+	-webkit-box-shadow: 0px 3px 9px rgba(150,150,150,1);
+    font-size: 10pt;
+}
+/****** menu principal *****/
+.row.menu ul { list-style: none; }
+.row.menu ul li { display: block; position: relative; float: left; }
+.row.menu li ul { display: none; z-index: 10; }
+.row.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border-right: 0px solid #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: #6b6b6b;
+    white-space: nowrap;
+}
+.row.menu ul li a:hover { background: #95A9B1; }
+.row.menu li:hover ul { display: block; position: absolute; }
+.row.menu li:hover li { float: none; }
+.row.menu li:hover a { background: #6b6b6b; }
+.row.menu li:hover li a:hover { background: #95A9B1; }
+/****** contenido ******/
+.row.main {
+    height: 546px; /* largo del contenedor principal */
+    display: block; /* se debe colocar en cada elemento que lo requiera */
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.row > .col-xs-4,
+.row > .col-xs-6,
+.row > .col-xs-8,
+.row > .col-xs-12 {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: middle;
+}
+.row > .col-xs-4.baseline,
+.row > .col-xs-6.baseline,
+.row > .col-xs-8.baseline,
+.row > .col-xs-12.baseline {
+    vertical-align: baseline;
+}
+.row.main .content-page {
+    height: auto;
+}
+.row.main .content-entry {
+    vertical-align: baseline;
+}
+.row .content-item {
+    color: #6e7072;
+    text-align: justify;
+    width: 560px; /* ancho de la imagen de separador */ 
+    margin: 0 auto;
+}
+
+.row .content-itemmision {
+    color: #6e7072;
+    text-align: justify;
+    width: auto; /* ancho de la imagen de separador */
+    margin: 0 auto;
+}
+
+.row .separator {
+    border-right: 1px dotted #005582;
+}
+#MainNewsCarousel {
+    width: 637px;
+    margin: 0 auto;
+}
+.carousel-inner {
+    /*width: 610px;*/
+}
+.modalmessage-normal {
+    font-size: x-large;
+    float: left;
+    padding-right: 5px;
+}
+.row.carousel {
+    height: 375px; /* considerar el total del largo de la fila en .row.main */
+    text-align: center;
+}
+.row.ads {
+    height: 170px; /* considerar el total del largo de la fila en .row.main */
+    text-align: center;
+}
+.helper-span {
+    display: inline-block;
+    padding: 10px; 
+    margin-top: 10px; 
+}
+/*** pie de página */
+.row.footer {
+    height: 40px;
+    background-image: url("../images/pleca_inferior.png");
+    text-align: center;
+    font-size: 10pt;
+    color: #929292;
+}
+.row.footer a {color: #929292; text-decoration: none;}
+.row.footer a:link {color: #929292; text-decoration: none;}
+.row.footer a:hover {color: #d9d9d9 ; text-decoration: underline;}
+.row.footer a:active {color: #d9d9d9 ; text-decoration: underline;}
+/**** login *****/
+.login-group {
+    width: 375px;
+    margin-left: 35px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.login-group .login-fields {
+    font-style: italic;
+    color: #808080;
+}
+.login-group .login-forgot {
+    font-size: 12pt;
+    font-style: italic;
+    color: #606060;
+}
+.login-group .login-forgot:hover { text-decoration: underline; }
+.login-group .recovery-text {
+    color: #4c4d4d;
+    font-size: 14pt;
+    font-style: normal;
+}
+.login-group .recovery-small {
+    color: #4c4d4d;
+    font-size: 10pt;
+    font-style: italic;
+}

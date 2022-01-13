@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal de Proveedores - DILTEX</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link href="css/VendorPortal.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/base.js"></script>
+    <script src="login/index.js"></script>
+</head>
+<body>
+<div id="wrapper" class="shadow">
+<form id="IndexForm" runat="server" role="form">
+    <div class="row header">
+        <div class="col-xs-8">
+            <img src="images/logo_grupodiltex.png" style="margin-left: 20px" />
+        </div>
+        <div class="col-xs-4 icons">
+            <a href="index"><img src="images/icono_log_in.png" 
+                onmouseout="hover(this, 'src','images/icono_log_in.png')"
+                onmouseover="hover(this, 'src','images/icono_log_in_hover.png')"/></a>
+            <img src="images/icono_ayuda.png" 
+                onmouseout="hover(this, 'src','images/icono_ayuda.png')"
+                onmouseover="hover(this, 'src','images/icono_ayuda_hover.png')"/>
+        </div>
+    </div>
+    <div id="LoginRow" class="row main" style="padding-top: 55px">
+        <div class="col-xs-6">
+            <img class="img-separator" src="images/linea_separacion.png" />
+            <div id="LoginDiv" class="login-group">
+                <div class="form-group login-fields">
+                    <input type="text" id="txtUserID"class="form-control" placeholder="Usuario" data-validate="true" 
+                        data-validatorproperties='{"type":"Validator.Types.required", "message":""}' />
+                </div>
+                <div class="form-group login-fields">
+                    <input type="password" id="txtPassword"class="form-control" placeholder="Password" data-validate="true" 
+                        data-validatorproperties='{"type":"Validator.Types.required", "message":""}' />
+                </div>
+                <div class="form-group">
+                    <a id="ForgotPassword" class="login-forgot" href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="form-group right">
+                    <button type="button" class="btn btn-primary" data-loading-text="Procesando..." 
+                        style="font-size: 12pt" id="cmdLogin">Ingresar</button>
+                </div>
+            </div>
+            <img class="img-separator" src="images/linea_separacion.png" />
+        </div>
+        <div class="col-xs-6">
+            <img src="images/img_iniciar_sesion.png" style="margin-left: 40px" />
+        </div>
+    </div>
+    <div id="RecoveryRow" class="row main" style="padding-top: 55px">
+        <div class="col-xs-6">
+            <img class="img-separator" src="images/linea_separacion.png" />
+            <div id="PasswordRecoveryDiv" class="login-group">
+                <p class="recovery-text">Recupera tu contraseña ingresando la información correspondiente</p>
+                <p class="recovery-small">*Solo ingresa los datos en uno de los campos</p>
+                <div class="form-group login-fields">
+                    <input type="text" id="txtRecoverUserID"class="form-control" placeholder="Usuario" />
+                </div>
+                <p class="center">o</p>
+                <div class="form-group login-fields">
+                    <input type="text" id="txtRecoverEmail"class="form-control" placeholder="Correo electrónico" />
+                </div>
+                <div class="form-group right">
+                    <button type="button" class="btn btn-primary" data-loading-text="Procesando..." 
+                        id="cmdRecoverPassword" style="font-size: 14pt">Enviar</button>
+                </div>
+            </div>
+            <img class="img-separator" src="images/linea_separacion.png" />
+        </div>
+        <div class="col-xs-6">
+            <img src="images/img_recuperar_contra.png" style="margin-left: 40px" />
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="col-xs-12">
+            <a href="Privacidad">Aviso de Privacidad</a>
+        </div>
+    </div>
+</form>
+</div>
+<div class="modal fade" id="ModalMessage" tabindex="-1" role="dialog" aria-labelledby="ModalMessage" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <div id="ModalMessageTitle"></div>
+        </div>
+        <div class="modal-body" id="ModalMessageBody">
+                
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="modal fade" id="ModalMessageTerms" tabindex="-1" role="dialog" aria-labelledby="ModalMessageTerms" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <div id="ModalMessageTermsTitle"></div>
+        </div>
+        <div class="modal-body" id="ModalMessageTermsBody">
+         
+        </div>
+        <div class="modal-footer">
+            <div >
+              <input type="checkbox" id="ChkIagree" />
+                <label  id ="lblChkIagree"> </label>
+            </div> 
+                <div class="controls"> 
+                    <button class="btn btn-inverse" id="cmdClose" value="CANCEL" data-dismiss="modal" aria-hidden="true"></button>
+                    <button class="btn btn-info" id="cmdConditions"></button>
+                </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
