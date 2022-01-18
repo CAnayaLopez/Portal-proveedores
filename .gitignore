@@ -143,5 +143,5 @@ dist
 .svelte-kit
 
 # Imagenes
-public/**/*.jpg
-public/**/*.png
+public/imagenes/**/*.jpg
+public/imagenes/**/*.png
