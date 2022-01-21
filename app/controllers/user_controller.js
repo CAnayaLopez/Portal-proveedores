@@ -1,5 +1,5 @@
 const index = (req, res, next) => {
-	res.render('../views/pages/home.ejs');
+	res.render('home');
 };
 
 module.exports = {
