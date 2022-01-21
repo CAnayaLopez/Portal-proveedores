@@ -145,3 +145,6 @@ dist
 # Imagenes
 public/images/**/*.jpg
 public/images/**/*.png
+
+#package
+package-lock.json
