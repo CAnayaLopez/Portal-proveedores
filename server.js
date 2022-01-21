@@ -80,6 +80,9 @@ server.listen(4000, () => {
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
+require('dotenv').config();
+
 
 const app = express();
 const routes = require('./routes/index.js');
@@ -97,10 +100,11 @@ app.use((req, res, next) => {
 	next();
 });
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // routes
 app.use(routes);
+app.use('/auth',require('./routes/auth_router'));
 
 // satic files
 app.use(express.static(path.join(__dirname, 'public')));
