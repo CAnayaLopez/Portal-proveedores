@@ -5,9 +5,6 @@ var ActiveDirectory = require('activedirectory');
 const login = (req, res = response) => {
     const { user, pass } = req.body;
 
-    console.log(req.body);
-
-    console.log(`Configuración: \nURL: ${process.env.AD_SERVER}\nbaseDN: ${process.env.AD_PRIMARY}`);
     var config = {
         url: process.env.AD_SERVER,
         baseDN: process.env.AD_PRIMARY,
