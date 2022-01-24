@@ -5,5 +5,10 @@ npm install
 
 ## Run project
 ```node
-node server.js
+node app.js
+```
+
+## run with nodemon
+```node
+nodemon app.js
 ```
